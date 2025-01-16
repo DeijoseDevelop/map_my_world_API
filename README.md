@@ -21,70 +21,6 @@ Map My World is a REST API built with FastAPI that allows users to explore and r
 - Pydantic for data validation
 - Uvicorn as ASGI server
 
-## Project Structure
-
-```
-map-my-world/
-├── app/
-│   ├── __init__.py
-│   ├── main.py
-│   ├── application/
-│   │   ├── __init__.py
-│   │   ├── api/
-│   │   |   ├── __init__.py
-|   |   │   ├── routes/
-|   |   │   │   ├── __init__.py
-|   |   │   │   ├── ro_location.py
-|   |   │   │   ├── ro_categories.py
-|   |   │   │   └── ro_review.py
-│   ├── domain/
-│   │   ├── __init__.py
-│   │   ├── entities/
-│   │   └── repositories/
-│   ├── infrastructure/
-│   │   └── repositories/
-│   ├── usecases/
-│   │   ├── __init__.py
-│   │   ├── uc_location.py
-│   │   ├── uc_category.py
-│   │   └── uc_review.py
-├── requirements.txt
-└── README.md
-    ...
-```
-
-## Data Models
-
-### Location
-
-```python
-class Location:
-    id: int
-    latitude: float
-    longitude: float
-    created_at: datetime
-```
-
-### Category
-
-```python
-class Category:
-    id: int
-    name: str
-    description: str
-    created_at: datetime
-```
-
-### LocationCategoryReviewed
-
-```python
-class LocationCategoryReviewed:
-    id: int
-    location_id: int
-    category_id: int
-    reviewed_at: datetime
-```
-
 ## API Endpoints
 
 ### Location
@@ -143,8 +79,8 @@ Sample response:
 {
   "recommendations": [
     {
-      "location_id": 1,
-      "category_id": 3,
+      "location_id": 10,
+      "category_id": 30,
       "last_reviewed": null,
       "location": {
         "latitude": 40.7128,
@@ -158,15 +94,3 @@ Sample response:
   ]
 }
 ```
-
-## Contribution
-
-1. Fork the repository
-2. Create a branch for your feature (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.

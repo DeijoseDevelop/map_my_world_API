@@ -3,8 +3,10 @@ from contextlib import asynccontextmanager
 from fastapi import Depends, FastAPI
 
 from app.config import Settings, get_settings
-from app.application.api.routes import ro_category, ro_location, ro_review
-from app.infrastructure.database import create_db_and_tables
+from app.category.infrastructure.api.routes import ro_category
+from app.location.infrastructure.api.routes import ro_location
+from app.review.infrastructure.api.routes import ro_review
+from app.common.infrastructure.database import create_db_and_tables
 
 
 @asynccontextmanager
