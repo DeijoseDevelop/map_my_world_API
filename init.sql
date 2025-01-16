@@ -1,0 +1,1 @@
+CREATE DATABASE map_my_world;

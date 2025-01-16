@@ -3,10 +3,16 @@ import os
 from sqlmodel import Session, SQLModel, create_engine
 
 
-sqlite_url = os.getenv("DATABASE_URL", "sqlite:///./map-my-world.db")
+default_sqlite_url = "sqlite:///./map-my-world.db"
+db_url = os.getenv("DATABASE_URL", default_sqlite_url)
 
-connect_args = {"check_same_thread": False}
-engine = create_engine(sqlite_url, connect_args=connect_args)
+if db_url.startswith("sqlite"):
+    # Para SQLite
+    connect_args = {"check_same_thread": False}
+    engine = create_engine(db_url, connect_args=connect_args)
+else:
+    # Para PostgreSQL (u otro motor)
+    engine = create_engine(db_url)
 
 
 def create_db_and_tables():
