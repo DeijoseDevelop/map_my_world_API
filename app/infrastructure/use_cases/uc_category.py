@@ -1,4 +1,4 @@
-from app.domain.entities.category import Category
+from app.domain.entities.e_category import Category
 from app.domain.repositories.r_category import ICategoryRepository
 from app.domain.use_cases.uc_base import UseCase
 

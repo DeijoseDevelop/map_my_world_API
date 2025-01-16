@@ -1,6 +1,6 @@
 from typing import List
 
-from app.domain.entities.review import LocationCategoryReview
+from app.domain.entities.e_review import LocationCategoryReview
 from app.domain.repositories.r_review import ILocationCategoryReviewRepository
 from app.domain.use_cases.uc_base import UseCase
 

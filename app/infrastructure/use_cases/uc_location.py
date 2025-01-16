@@ -1,4 +1,4 @@
-from app.domain.entities.location import Location
+from app.domain.entities.e_location import Location
 from app.domain.repositories.r_location import ILocationRepository
 from app.domain.use_cases.uc_base import UseCase
 
