@@ -16,4 +16,4 @@ class GetAllCategoriesUseCase(UseCase):
         self.category_repository = category_repository
 
     async def execute(self, offset: int = 0, limit: int = 100) -> Category:
-        return await self.category_repository.all(offset, limit)
+        return await self.category_repository.findAll(offset, limit)

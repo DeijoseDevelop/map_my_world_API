@@ -3,7 +3,7 @@ from datetime import datetime, timedelta
 from sqlmodel import Session, or_, select
 
 from app.domain.repositories.r_review import ILocationCategoryReviewRepository
-from app.infrastructure.models.models import LocationCategoryReviewModel
+from app.infrastructure.models import LocationCategoryReviewModel
 
 
 class DBLocationCategoryReviewRepository(ILocationCategoryReviewRepository):

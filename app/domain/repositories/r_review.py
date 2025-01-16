@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from ..entities.review import LocationCategoryReview
+from ..entities.e_review import LocationCategoryReview
 
 
 class ILocationCategoryReviewRepository(ABC):

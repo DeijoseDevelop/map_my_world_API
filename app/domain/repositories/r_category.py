@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from ..entities.category import Category
+from ..entities.e_category import Category
 
 
 class ICategoryRepository(ABC):

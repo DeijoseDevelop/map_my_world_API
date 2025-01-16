@@ -3,9 +3,9 @@ from typing import Annotated
 from fastapi import Query
 from sqlmodel import Session, select
 
-from app.domain.entities.location import Location
+from app.domain.entities.e_location import Location
 from app.domain.repositories.r_location import ILocationRepository
-from app.infrastructure.models.models import LocationModel
+from app.infrastructure.models import LocationModel
 
 
 class DBLocationRepository(ILocationRepository):
@@ -29,7 +29,7 @@ class DBLocationRepository(ILocationRepository):
             created_at=db_location.created_at,
         )
 
-    async def finAll(
+    async def findAll(
         self,
         offset: int = 0,
         limit: Annotated[int, Query(le=100)] = 100,

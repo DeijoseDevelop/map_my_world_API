@@ -3,7 +3,7 @@ from typing import Annotated
 from fastapi import Query
 from sqlmodel import Session, select
 
-from app.domain.entities.category import Category
+from app.domain.entities.e_category import Category
 from app.domain.repositories.r_category import ICategoryRepository
 from app.infrastructure.models import CategoryModel
 

@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from ..entities.location import Location
+from ..entities.e_location import Location
 
 
 class ILocationRepository(ABC):
